@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trebuchet MS'), url('font/trebuc.woff'), format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Trebuchet MS Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trebuchet MS Italic'), url('font/Trebuchet-MS-Italic.woff'), format('woff');
+    }
+
+:root{
+    --white : #fff;
+    --black : #000;
+    --cardBorder : #ffffff30;
+    --cardBackground : #ffffff1a;
+    --btnBg : #ffffff00;
+    --btnFocus : #ffffffb9;
+
+    --facebook : #1771e6;
+    --twitter : #1c99e6;
+    --instagram : #cb2770;
+    --whatsapp : #2fe664;
+    --telegram : #0081c2;
+    --github : rgb(88, 101, 242);
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+     width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.wrapper2{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-size: cover;
+
+}
+
+.share-card
+{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--white);
+    background: var(--cardBackground);
+    border: 0.2rem solid var(--cardBorder);
+    border-radius: 1.5rem;
+    padding: 2rem 5rem;
+    backdrop-filter: blur(1.5rem);
+    position: relative;
+    z-index: 10;
+}
+
+.share-card img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 2px solid var(--cardBorder);
+    object-fit: cover;
+}
+
+.name{
+    font-size: 3.2rem;
+}
+
+.role{
+    font-size: 0.8rem;
+    color: #ffffff85;
+}
+
+.button-group{
+    display: flex;
+    gap: 1rem;
+}
+
+.button-group button{
+    width: 15rem;
+    color: var(--btnFocus);;
+    background: var(--btnBg);
+    text-transform: capitalize;
+    border: 0.2rem solid var(--btnFocus);
+    border-radius: 0.4rem;
+    padding: 0.9rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    /* items ke beech ka gap  */
+}
+
+.share-card .button-group button:hover{
+    background: var(--btnFocus);
+    color: #131313;
+}
+
+
+/* share modal */
+.modal{
+     width: 55rem;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     translate: -50% -50%;
+     color: var(--white);
+     background: #00000088;
+     padding: 2rem 2.5rem;
+     border: 0.2rem solid #ffffff59;
+     border-radius: 2rem;
+     backdrop-filter: blur(1rem);
+     scale: 0;
+     transition: all 0.5s ease-in-out;
+     z-index: 30;
+     /* card ka z index 10 kiya tha na  */
+    /* ye overlap karega to z index 30 
+    circle ka to card ke bhi beeche rakhna hai  */
+
+}
+
+.modal-active{
+    scale: 1;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    /* taaki extreme ends pahuch jaye title aur  cross icon  */
+    align-items: center;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid #ffffff88;
+    margin-bottom: 2.5rem;
+
+}
+
+.modal-title{
+    font-size: 3.2rem;
+}
+.modal-header .modal-close{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 1.9rem;
+}
+
+
+
+
