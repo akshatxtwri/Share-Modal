@@ -22,7 +22,7 @@
 :root{
     --white : #fff;
     --black : #000;
-    --cardBorder : #ffffff30;
+    --cardBorder : #ffffff87;
     --cardBackground : #ffffff1a;
     --btnBg : #ffffff00;
     --btnFocus : #ffffffb9;
@@ -52,8 +52,9 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color:#000;
     background-size: cover;
+    background-image: url(./empire-state-building-manhattan-new-york-city-skyscraper-3840x2160-1343.jpg);
 
 }
 
@@ -141,12 +142,12 @@ body{
      /* card ka z index 10 kiya tha na  */
     /* ye overlap karega to z index 30 
     circle ka to card ke bhi beeche rakhna hai  */
-
 }
-
-.modal-active{
+.modal.active{
     scale: 1;
 }
+
+
 
 .modal-header{
     display: flex;
@@ -162,14 +163,136 @@ body{
 .modal-title{
     font-size: 3.2rem;
 }
-.modal-header .modal-close{
+.profile-modal-close{
     font-size: 3rem;
 }
 
-h3{
+
+
+.modal h3{
     font-size: 1.9rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
 }
 
 
+ .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.1rem solid #ffffff88;
+    transition: all 0.5s;
+    margin: 1rem 0 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    padding: auto 5px;
+    margin: 1rem;
+}
+
+.soical-media .icon i{
+    font-size: 2.7rem;
+}
+
+#facebook-icon {
+    
+    color: var(--facebook);
+    border: 1px solid var(--facebook);
+    
+}
+
+#facebook-icon:hover{
+    color: var(--white);
+    background: var(--facebook);
+}
+
+#twitter-icon {
+    color: var(--twitter);
+    border: 1px solid var(--twitter);
+}
+
+#twitter-icon:hover{
+    color: var(--white);
+    background: var(--twitter);
+}
+
+#instagram-icon {
+    color: var(--instagram);
+    border: 1px solid var(--instagram);
+}
+
+#instagram-icon:hover{
+    color: var(--white);
+    background: var(--instagram);
+}
+
+#whatsapp-icon {
+    color: var(--whatsapp);
+    border: 1px solid var(--whatsapp);
+}
+
+#whatsapp-icon:hover{
+    color: var(--white);
+    background: var(--whatsapp);
+}
+
+#telegram-icon {
+    color: var(--telegram);
+    border: 1px solid var(--telegram);
+}
+
+#telegram-icon:hover{
+    color: var(--white);
+    background: var(--telegram);
+}
+
+#github-icon {
+    color: var(--github);
+    border: 1px solid var(--github);
+
+}
+
+#github-icon:hover{
+    color: var(--white);
+    background: var(--github);
+}
+
+.overlay{
+    position: fixed;
+    left: 0; 
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #5f5f5f83;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+
+.modal-body-header{
+    display: flex;
+    justify-content: space-between;
+    /* taaki extreme ends pahuch jaye title aur  cross icon  */
+    align-items: center;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid #ffffff88;
+    margin-bottom: 2.5rem;
+}
 
 
